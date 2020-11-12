@@ -1,1 +1,1 @@
-# tindog-challange
+# tindog-challenge
