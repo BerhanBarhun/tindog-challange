@@ -219,3 +219,8 @@ h2 {
 .social i:hover {
   color: #8f8f8f;
 }
+@media screen and (max-width: 1040px) {
+  .iphone {
+    position: relative;
+  }
+}
