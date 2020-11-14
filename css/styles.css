@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -11,7 +15,7 @@ body {
   margin: 0;
   padding-top: 5rem;
 }
-.container h1 {
+h1 {
   font-size: 3.7rem;
   line-height: 1.5;
   font-weight: 900;
@@ -21,9 +25,10 @@ body {
   padding: 3% 15% 3% 15%;
 }
 
-.container-fluid button {
-  font-size: 1.5rem;
-  margin-top: 3rem;
+.titletext button {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 12rem;
 }
 .container-fluid .nav-item {
   font-size: 1.5rem;
@@ -36,18 +41,23 @@ body {
 }
 @keyframes phone {
   0% {
-    transform: rotate(15deg);
+    transform: translateY(5rem);
+  }
+  20% {
+    transform: translateY(0);
   }
   100% {
-    transform: rotate(20deg);
+    transform: rotate(15deg);
   }
 }
 .iphone {
-  transform: rotate(20deg);
+  transform: rotate(15deg);
   width: 80%;
   animation: phone;
   animation-duration: 3s;
   animation-delay: 0s;
+  position: absolute;
+  right: 0%;
 }
 
 /* features */
@@ -56,13 +66,27 @@ body {
   color: #8f8f8f;
   padding: 5% 5%;
   font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  background-color: white;
 }
 
-.features h3 {
+h3 {
   font-size: 1.5rem;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.63);
   padding: 1.5rem 0;
+}
+@keyframes slideup {
+  0% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .featureslogo {
   font-size: 5rem;
@@ -70,6 +94,9 @@ body {
 }
 .featureslogo:hover {
   color: #ff4c68;
+  animation: slideup;
+  animation-duration: 1.5s;
+  animation-delay: 0;
 }
 /* testimonials */
 #testimonials {
@@ -82,7 +109,7 @@ body {
   width: 15%;
   padding: 1.2rem;
 }
-.testimonials h2 {
+h2 {
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.5;
@@ -106,8 +133,8 @@ body {
 
 /* title animation */
 @keyframes slideright {
-  0% {
-    transform: translateX(-1.5rem);
+  20% {
+    transform: translateX(-2.5rem);
   }
   100% {
     transform: translateX(0);
@@ -143,4 +170,52 @@ body {
   animation: slidedown;
   animation-duration: 3s;
   animation-delay: 0;
+}
+
+/* pricing */
+.card h3 {
+  font-weight: 900;
+  font-size: 2rem;
+  color: #000;
+}
+#pricing {
+  padding: 6rem;
+  text-align: center;
+}
+.card-column {
+  padding: 3% 2%;
+}
+
+/* footer */
+#cta {
+  background-color: #ff4c68;
+  text-align: center;
+  padding: 8% 20%;
+}
+.cta h3 {
+  font-weight: 900;
+  font-size: 4rem;
+  color: white;
+}
+.cta button {
+  margin: 2%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #8f8f8f;
+}
+.social {
+  color: black;
+  font-size: 1.5rem;
+  margin: 5rem auto 2rem auto;
+}
+.social i {
+  padding: 1rem;
+}
+.social i:hover {
+  color: #8f8f8f;
 }
